@@ -1,0 +1,11 @@
+div{
+    border: springgreen 3px solid;
+    padding: 20px;
+    margin: 5px;
+}
+
+#c{
+    text-align: center;
+    text-transform: uppercase;
+    color:brown;
+}

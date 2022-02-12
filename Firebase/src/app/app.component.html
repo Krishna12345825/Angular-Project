@@ -1,0 +1,14 @@
+<h1>This is your Firebase Database</h1><br><br>
+
+coursename<input type="text" #cname>
+course fees <input type="text" #fees>
+<button (click)=add(cname,fees)>add record</button>
+<ul>
+  <li *ngFor="let course of courses$|async">
+    <!-- {{course|json}} -->
+    {{course.payload|json}}
+    <input type="text" #ufees>
+    <button (click)="update(ufees, course.key)">update fees</button>
+  </li>
+</ul>
+

@@ -1,0 +1,22 @@
+<h1 id="c">ng-If</h1>
+
+<!-- it is old version -->
+<!-- <input type="checkbox" (change)="val=!val">
+<div *ngIf=val;>lorEM enfbnfb </div>
+
+<div *ngIf=!val;> Hello Div2</div> -->
+
+
+<!-- 2nd method -->
+<!-- <input type="checkbox" (change)="val=!val">
+<div *ngIf="val; else t1">lorEM enfbnfb </div>
+
+<ng-template #t1><div> Hello Div2</div></ng-template> -->
+
+
+<!-- 3rd method  -->
+<input type="checkbox" (change)="val=!val">
+<div *ngIf="val; then t1 else t2"></div>
+<ng-template #t1><div> Hello Div1</div></ng-template>
+
+<ng-template #t2><div> Hello Div2</div></ng-template>

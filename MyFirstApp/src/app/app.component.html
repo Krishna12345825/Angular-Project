@@ -1,0 +1,62 @@
+<h1>Krishna Kumar</h1>
+<demo></demo>
+<app-course></app-course>
+
+<img src={{path}}/>     <!--  dom -->
+<button [disabled]=state>clicK me</button>      <!--  property Binding -->
+
+<table border="1">
+     <tr><td>2</td><td>DairymilK</td><td>300</td></tr>
+     <tr><td>4</td><td>Maggie</td><td>240</td></tr>
+     <tr><td>1</td><td>Tomato</td><td>100</td></tr>
+     <tr><td>1</td><td>ModaK</td><td>300</td></tr>
+
+     <tr><td [attr.colspan]='colval'>Total</td><td>940</td></tr>   <!--  attribute Binding --> 
+</table>
+
+
+<h1 [style.width.px]=wpx [style.backgroundColor]=c>Hello World</h1>   <!--  style Binding -->
+
+<div [style]="{
+    width:w,
+    height:'200px',
+    border:'1px solid red'
+}"> Good Morning Friends</div>
+
+<div [ngStyle]="r1">Good Morning Jii</div>
+
+
+<!-- Class Binding -->
+<h1 class="clr bstyle fstyle">Good After Noon</h1>
+<h1 [class]="['clr', 'bstyle']">Good Evening</h1>
+<h1 [class]="tsbstyle">Good brother</h1>
+<h1 [class.clr]="states">Ganpati Bapa Morya</h1>
+<h1 [class]="{clr:states,
+    fstyle:states,
+    bstyle:states}"> Welcome to Anguler
+</h1>
+
+
+
+{{count}}<br>
+<button (click)="increase()">increment</button>
+<button (click)="decrease()">decrement</button>
+<span class="far" [class.fa-folder]='isopen' [class.fa-folder-open]='!isopen' (click)="openevent()"style="font-size:50px"></span><br>
+<input type="text" (input)="inputdemo($event)"><br>
+<!-- <input type="text" (keydown)="onkeydown($event)"><br> -->
+<input type="text" (keyup)="onkeydown($event)"><br>
+<input type="text" (keyup.enter)="onkeydown($event)"><br> 
+<input type="text" #fname (keyup.enter)="onkeydown(fname.value)"><br>
+
+
+
+<!-- Two way data binding -->
+name <input type="text" [(ngModel)]=val> <br>
+you typed: {{val}} <br><br><br>
+
+
+
+
+
+<!-- @input and @Output  -->
+

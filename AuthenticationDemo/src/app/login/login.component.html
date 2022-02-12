@@ -1,0 +1,18 @@
+<!-- <p>login works!</p> -->
+<div class="container">
+    <form #f=ngForm (ngSubmit)="signin(f.value)">
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Email address</label>
+            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com"
+                name="uname" ngModel>
+        </div>
+
+        <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label">Enter Password</label>
+            <input type="password" class="form-control" id="exampleFormControlTextarea1" name="pass" ngModel>
+        </div>
+        
+        <div class="alert alert-danger" *ngIf=!flag>username or password is invalid</div>
+        <button class="btn btn-primary">Submit</button>
+    </form>
+</div>

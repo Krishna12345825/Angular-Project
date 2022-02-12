@@ -1,0 +1,12 @@
+<h1 id="p">child3 works! Ng-Switch </h1>
+
+
+<button (click)="val='Java' "> Java </button>
+<button (click)="val='Python' "> Python </button>
+<button (click)="val='Anguler' "> Anguler </button>
+
+<div [ngSwitch]="val">
+<div *ngSwitchCase="'Java' "> Content of Java</div>
+<div *ngSwitchCase="'Python' "> Content of python</div>
+<div *ngSwitchCase="'Anguler' "> Content of Anguler</div>
+</div>

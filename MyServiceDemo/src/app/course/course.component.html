@@ -1,0 +1,19 @@
+
+<span>{{courses.length}} Courses     </span>
+<select>
+    <option *ngFor="let course of courses">
+      {{course}}
+    </option>
+</select>  <br><br>
+
+<table border='1'>
+    <tr *ngFor="let course of courses">
+             <td>{{course}}</td>
+    </tr>
+</table><br>
+
+<ul>
+   <li *ngFor="let course of courses">
+      {{course}}
+   </li> 
+</ul>

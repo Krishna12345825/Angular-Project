@@ -1,0 +1,11 @@
+<p>post works!</p>
+
+<div class="container">
+    <ul class="list-group m-2">
+       <li class="list-group-item" *ngFor="let element of formdata">
+           <button class="btn btn-primary" (click)="onupdate(element.id)">update</button>
+           <button class="btn btn-danger" (click)="ondelete(element.id)">delete</button>
+           id:{{element.id}} title:{{element.title}}
+       </li>
+    </ul>
+</div>

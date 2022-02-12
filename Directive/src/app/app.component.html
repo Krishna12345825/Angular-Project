@@ -1,0 +1,43 @@
+<h1 id="f">Hello Krishna </h1>
+
+<app-child1>
+  <ng-container class="d1"><h1>Hello</h1></ng-container>
+  <ng-container class="d2"><h1>Content od div2</h1></ng-container>
+  <h2>
+    This is Extra Content
+  </h2>
+</app-child1>
+
+<app-child2></app-child2>
+<app-child3></app-child3>
+
+
+
+<!-- Custom Directive and pipes -->
+<h1>Custom Directive and pipes</h1>
+<input type="text" appMyDirective><br><br>
+<input type="number" appNumber><br><br>
+
+<!-- pipes -->
+<!-- {{msg|uppercase|lowercase|titlecase}}
+{{dt}} -->
+
+<!-- {{msg|uppercase|lowercase|titlecase}}
+{{dt |date}} -->
+
+<!-- {{msg|uppercase|lowercase|titlecase}}
+{{dt |date: 'short'}} -->
+
+<!-- {{msg|uppercase|lowercase|titlecase}}
+{{dt |date: 'medium'}} -->
+
+
+{{msg|uppercase|lowercase|titlecase}}
+{{dt |date: 'medium'}}<br>
+{{amt |currency:'INR' : 'code' : '4.2-4'}}
+{{amt |number:'5.2-2'}}
+{{p |percent:'4.2-2'}}
+
+
+<!-- var x :number |string | -->
+<!-- font-family : arial, hala, -->

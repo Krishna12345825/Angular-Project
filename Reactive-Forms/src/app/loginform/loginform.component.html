@@ -1,0 +1,30 @@
+<p>loginform works!</p>
+
+<div class="container">
+    <form [formGroup]="form">
+        <div class="mb-3">
+            <label for="uname" class="form-label"> Enter Username</label>
+
+            <input formControlName="uname" type="text" class="form-label" id="uname">
+            <!-- <div *ngIf="uname.invalid && uname.touched" class="alert alert-denger">
+            <div *ngIf="form.get('uname').errors.required">Username is required</div>
+            <div *ngIf="form.get('uname').errors.minlength">min length should be 5</div> -->
+
+            <div *ngIf="uname?.invalid && uname?.touched" class="alert alert-denger">
+                <div *ngIf="uname?.errors?.['required']">Username is required</div>
+                <div *ngIf="uname?.errors?.['minlength']">min length should be 5</div>
+                <div *ngIf="uname?.errors?.['isSpace']">space is not allowwed in uname</div>
+            </div>
+        </div>
+
+
+        <div class="mb-3">
+            <label for="pass" class="form-label"> Enter Password</label>
+
+            <input formControlName="pass" type="password" class="form-label" id="pass">
+        </div>
+
+        <button class="btn btn-primary">Submit</button>
+    </form>
+
+</div>

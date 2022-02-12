@@ -1,0 +1,15 @@
+<!-- <p>posts works!</p> -->
+<div class="container">
+    <ul class="list-group m-2">
+        <li class="list-group-item" *ngFor="let e of fdata">
+            {{e.id}}  {{e.title}}
+            <a [routerLink]="['/posts',e.id]"> get</a>
+
+            <a routerLink="/card" [queryParams]="{en:e.id,name:'ram'}">    Info</a>
+        </li>
+    </ul>
+</div>
+
+
+
+

@@ -1,0 +1,18 @@
+div{
+    border: springgreen 3px solid;
+    padding: 20px;
+    margin: 5px;
+}
+button{
+    background-color: cadetblue;
+    color: chartreuse;
+    padding: 10px;
+    border-radius: 3px;
+    margin: 10px;
+
+}
+#p{
+    text-align: center;
+    text-transform: uppercase;
+    color:brown;
+}

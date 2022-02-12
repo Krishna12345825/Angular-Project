@@ -1,0 +1,71 @@
+<h1 id="p">krishna kumar</h1>
+<h1> chapter -: Template Driven Form</h1>
+
+<!-- <button class="btn btn-primary">sumit</button> -->
+
+<!-- <form>
+  <div class="mb-3">
+    <label for="fname">Enter Name</label>
+    <input required minlength=5 ngModel type="text" id="fname" class="form-control" name="fname" #t1=ngModel (change)="m1(t1)">
+    <div *ngIf="!t1.valid&& t1.touched">
+      <div *ngIf="t1.errors?.required">First Name is required</div>
+      <div>Min length should be {{t1.errors?.minlength.requiredLength}}</div>
+    </div>
+  </div>
+  <div class="mb-3">
+    <label for="desc">Description</label>
+    <textarea name="desc" id="desc" cols="15" rows="5" class="form-control"></textarea>
+  </div>
+  <button class="btn btn-primary">sumit</button>
+</form> -->
+
+
+<!-- ngForm -->
+
+<form #f1=ngForm (ngSubmit)="m2()">
+  <div class="mb-3">
+    <label for="fname">Enter Name</label>
+    <input required minlength=5 ngModel type="text" id="fname" class="form-control" name="fname" #t1=ngModel
+           (change)="m1(t1)">
+    <div *ngIf="!t1.valid&& t1.touched">
+      <div *ngIf="t1.errors?.required">First Name is required</div>
+      <div *ngIf="t1.errors?.minlength">Min length should be {{t1.errors?.minlength.requiredLength}}</div>
+    </div>
+  </div>
+  <div class="mb-3">
+    <label for="desc">Description</label>
+    <textarea required ngModel name="t1" id="desc" cols="30" rows="10" class="form-control"></textarea>
+  </div>
+
+
+  <div class="form-check">
+    <input class="form-check-input" type="radio" id="r1" name="r1" value="python">
+    <label class="form-check-label" for="r1">
+      Python
+    </label>
+  </div>
+  <div class="form-check">
+    <input class="form-check-input" type="radio" id="r2" name="r1" value="java">
+    <label class="form-check-label" for="r2">
+      Java
+    </label>
+  </div>
+  <br><br>
+
+  <div class="form-check">
+    <input class="form-check-input" type="checkbox" id="flexCheckDefault">
+    <label class="form-check-label" for="flexCheckDefault">
+      I have read Carefully!
+    </label>
+  </div>
+
+  <div>
+    <select name="s1" class="form-select" ngModel>
+      <option *ngFor="let student of details" [ngValue]="student">{{student.name}}</option>
+    </select>
+  </div>
+  <br><br>
+  <button class="btn btn-primary" [disabled]=!f1.valid>sumit</button>
+  <br><br>
+</form>
+{{f1.value|json}}

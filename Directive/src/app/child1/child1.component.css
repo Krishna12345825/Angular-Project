@@ -1,0 +1,9 @@
+div{
+    border: brown 2px solid;
+}
+
+#c{
+    text-align: center;
+    text-transform: uppercase;
+    color:chartreuse;
+}

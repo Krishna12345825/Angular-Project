@@ -1,0 +1,22 @@
+<h1>Krishna Kumar</h1>
+<app-child [item]="currentItem"></app-child>
+<ul>
+    <li *ngFor="let i of item">{{i}}</li>
+</ul>
+<app-child2 [item]=item[0] (newItemAdded)="onitemadded($event)"></app-child2>
+
+
+
+<p>Parent child two way Data Binding</p>
+<!-- Desugered Syntax -->
+<!-- <app-child3 [size]=fontsizepx (sizeChange)="fontsizepx"></app-child3><br><br> -->
+<!-- <input type="number" [value]=fontsizepx (keyup)="fontsizepx=$event.target.value"> -->
+
+
+
+
+
+<!-- Sugered Syntax -->
+<app-child3 [(size)]=fontsizepx></app-child3><br><br>
+<input type="number" [(ngModel)]="fontsizepx">
+

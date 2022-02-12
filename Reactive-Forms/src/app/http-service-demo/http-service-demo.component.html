@@ -1,0 +1,24 @@
+<p>http-service-demo works!</p>
+<!-- {{formdata}} -->
+
+
+<!-- {{formdata | json}}    -->
+  <!-- This is the form of json -->
+
+<!-- <div>
+    {{formdata[0].id}} {{formdata[0].title}}
+</div> -->
+
+
+<!-- <div *ngFor="let element of formdata">
+   id :{{element.id}}   title: {{element.title}}
+</div> -->
+
+<div *ngIf="formdata; else loading ">
+    <img [src]=formdata.results[0].picture.large/>
+    {{formdata.results[0].name.title}}. {{formdata.results[0].name.first}} {{formdata.results[0].name.last}}
+ </div>
+ <ng-template #loading>
+     <div>loading..................</div>
+ </ng-template>
+ <button (click)="onpost">Submit </button>

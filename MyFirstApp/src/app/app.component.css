@@ -1,0 +1,18 @@
+h1{
+    font-style: italic;
+    background-color: aqua;
+    text-decoration: dotted;
+    text-align: center;
+}
+
+
+.clr{
+    color: aquamarine;
+    text-align: center;
+}
+.fstyle{
+    font-style: italic;
+}
+.bstyle{
+    border: 1px solid brown;
+}
